@@ -1,0 +1,9 @@
+node_modules/**/*
+.expo/**/*
+
+# Jest
+#
+.jest/
+/**/__snapshots__/*.*
+
+*.orig

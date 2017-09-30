@@ -1,0 +1,3 @@
+export const LOCATOR_BOOTSTRAPPER = {
+  BOOTSTRAPPER: Symbol('BOOTSTRAPPER')
+}

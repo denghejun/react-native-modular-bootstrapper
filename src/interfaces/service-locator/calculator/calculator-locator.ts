@@ -1,0 +1,3 @@
+export const LOCATOR_CALCULATOR = {
+  CALCULATOR: Symbol('CALCULATOR')
+}

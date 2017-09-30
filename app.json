@@ -1,0 +1,46 @@
+{
+  "expo": {
+    "name": "five-films",
+    "description": "No description",
+    "slug": "five-films",
+    "privacy": "public",
+    "sdkVersion": "20.0.0",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "primaryColor": "#cccccc",
+    "icon": "./src/assets/icons/app-icon.png",
+    "notification": {
+      "icon": "./src/assets/icons/notification-icon.png",
+      "color": "#000000"
+    },
+    "loading": {
+      "icon": "./src/assets/icons/loading-icon.png",
+      "hideExponentText": false
+    },
+    "packagerOpts": {
+      "config": "rn-cli.config.js",
+      "assetExts": [
+        "ttf"
+      ]
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "extra": {
+      "api": {
+        "movie": {
+          "apiKey": "07d77e2e7f3ad6828cb78f89cdb8a644",
+          "recommendServiceUri": "https://op.juhe.cn/onebox/movie/pmovie",
+          "searchServiceUri": "https://op.juhe.cn/onebox/movie/video"
+        },
+        "location": {
+          "apiKey": "UipxUiW5iUaAaEx7WO5wT2RxCypeSCc7",
+          "uri": "http://api.map.baidu.com/geocoder/v2/"
+        },
+        "image": {
+          "uri": "https://loremflickr.com/320/240/{keywords}"
+        }
+      }
+    }
+  }
+}
