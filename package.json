@@ -1,9 +1,13 @@
 {
   "name": "react-native-modular-bootstrapper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "One useful modular development framework depends on Ioc and Expo for react native.",
-  "author": "leo",
-  "license": "",
+  "author": "colorfulwindmill",
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/denghejun/react-native-modular-bootstrapper.git"
+  },
   "main": "index.ts",
   "keywords": [
     "react",
