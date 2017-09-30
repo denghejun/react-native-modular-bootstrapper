@@ -1,19 +1,6 @@
-#### Get Started1
-
-#### 1.link/init local app node modules
+#### Get Started
 ```
-npm run init
-
-```
-
-#### 2. install node modules
-```
-npm install
-```
-
-#### 3. run in expo
-```
-exp start -c
+TO DO ...
 ```
 
 #### MIT License
