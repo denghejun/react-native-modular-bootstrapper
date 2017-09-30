@@ -1,7 +1,7 @@
 {
   "name": "react-native-modular-bootstrapper",
   "version": "1.0.0",
-  "description": "One useful modular development framework depends on Ioc for react native.",
+  "description": "One useful modular development framework depends on Ioc and Expo for react native.",
   "author": "leo",
   "license": "",
   "main": "index.ts",
@@ -13,7 +13,8 @@
     "bootstrapper",
     "Ioc",
     "inversify",
-    "inversion of control"
+    "inversion of control",
+    "expo"
   ],
   "scripts": {
     "test": "node ./node_modules/jest/bin/jest.js --watch"
