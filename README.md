@@ -1,7 +1,17 @@
-#### Get Started
+# [React Native Modular Bootstrapper](https://github.com/denghejun/react-native-modular-bootstrapper.git) &middot;[![npm version](https://badge.fury.io/js/react-native-modular-bootstrapper.svg)](https://badge.fury.io/js/react-native-modular-bootstrapper)
+
+One useful modular development framework depends on Ioc and Expo for react native.
+
+
+#### Install
 ```
-TO DO ...
+npm install --save react-native-modular-bootstrapper inversify
 ```
+
+#### Getting Started
+
+TO DO.
+
 
 #### MIT License
 
