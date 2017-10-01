@@ -10,7 +10,7 @@ it('[calculator-service : 01] should get right result.', async () => {
 
   // when
   const service = Container.get<ServiceContract.CalculatorService>(ServiceLocator.LOCATOR_CALCULATOR.CALCULATOR);
-  const result = service.add(a, b)
+  const result = service.add(a, b);
 
   // then
   expect(result).toBe(300);
