@@ -66,6 +66,17 @@ To use this package, you need to install package `inversify` at the same time (s
 ```
 npm install --save react-native-modular-bootstrapper inversify
 ```
+To make it works you should make sure you have options below in your `tsconfig.json`.
+```
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  }
+}
+
+```
 
 ## Getting Started
 
