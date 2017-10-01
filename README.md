@@ -10,6 +10,20 @@ One useful modular development framework depends on Ioc, Expo and TypeScript for
 
 First of all, please give me your star on my [github repository](https://github.com/denghejun/react-native-modular-bootstrapper) if you like it and want to let more people know. I will continue working on this package to make it better as well. Thanks!
 
+## You Will Get From This Documentation
+
+- [What is Modular Programing](#What is Modular Programing)
+- [What is High Cohesion and Low Coupling](#What is High Cohesion and Low Coupling)
+- [How your app will look like if you choose this](#How your app will look like if you choose this)
+- [Install](#Install)
+- [Getting Started](#Getting Started)
+  - [1. Define Your Services.](#1. Define Your Services)
+  - [2. Define Your Modules](#2. Define Your Modules)
+  - [3. Define Your Module Provider Configuration](#3. Define Your Module Provider Configuration)
+  - [4. Use it](#4. Use it)
+- [Extra](#Extra)
+- [MIT License](#MIT License)
+
 ## What is Modular Programing
 
 Modular always be a better choice whatever you're programing for. A complex application always need some dependences (e.g. a movie app may depend on a movie search service). And different kinds of dependences will like a mess of porridge once you stop managing. Basically, I have an idea to manage them, that maybe `Modular`.
@@ -56,7 +70,7 @@ npm install --save react-native-modular-bootstrapper inversify
 ## Getting Started
 
 Please make sure you are using `TypeScript`, `expo` before we go.
-### 1. Define Your Services.
+### 1. Define Your Services
 The services which will be used somewhere in the future. So we should write some codes to tell how it works. e.g. I will define a very simple calculator service here.
 ```
 // calculator-service-interface.ts
