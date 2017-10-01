@@ -12,17 +12,17 @@ First of all, please give me your star on my [github repository](https://github.
 
 ## You Will Get From This Documentation
 
-- [What is Modular Programing](#What is Modular Programing)
-- [What is High Cohesion and Low Coupling](#What is High Cohesion and Low Coupling)
-- [How your app will look like if you choose this](#How your app will look like if you choose this)
-- [Install](#Install)
-- [Getting Started](#Getting Started)
-  - [1. Define Your Services.](#1. Define Your Services)
-  - [2. Define Your Modules](#2. Define Your Modules)
-  - [3. Define Your Module Provider Configuration](#3. Define Your Module Provider Configuration)
-  - [4. Use it](#4. Use it)
-- [Extra](#Extra)
-- [MIT License](#MIT License)
+- [What is Modular Programing](#what-is-modular-programing)
+- [What is High Cohesion and Low Coupling](#what-is-high-cohesion-and-low-coupling)
+- [How your app will look like if you choose this](#how-your-app-will-look-like-if-you-choose-this)
+- [Install](#install)
+- [Getting Started](#getting-started)
+  - [1. Define Your Services.](#1.-define-your-services)
+  - [2. Define Your Modules](#2.-define-your-modules)
+  - [3. Define Your Module Provider Configuration](#3.-define-your-module-provider-configuration)
+  - [4. Use it](#4.-use-it)
+- [Extra](#extra)
+- [MIT License](#mit-license)
 
 ## What is Modular Programing
 
