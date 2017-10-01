@@ -194,7 +194,7 @@ it('[calculator-service : 01] should get right result 300.', async () => {
 
 #### MIT License
 
-Copyright (c) 2017 leo
+Copyright (c) 2017 ColorfulWindmill
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
