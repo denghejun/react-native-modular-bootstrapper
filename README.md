@@ -4,6 +4,7 @@
 
 [![NPM](https://nodei.co/npm/react-native-modular-bootstrapper.png?downloads=true&downloadRank=true)](https://nodei.co/npm/react-native-modular-bootstrapper/)
 
+[![logo](https://raw.githubusercontent.com/denghejun/react-native-modular-bootstrapper/master/src/image/logo3.png)](http://denghejun.github.io)
 
 One useful modular development framework depends on Ioc, Expo and TypeScript for react native.
 
