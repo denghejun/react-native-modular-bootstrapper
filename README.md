@@ -70,7 +70,7 @@ npm install --save react-native-modular-bootstrapper inversify
 ## Getting Started
 
 Please make sure you are using `TypeScript`, `expo` before we go.
-### 1. Define Your Services
+### 1.Define Your Services
 The services which will be used somewhere in the future. So we should write some codes to tell how it works. e.g. I will define a very simple calculator service here.
 ```
 // calculator-service-interface.ts
@@ -99,7 +99,7 @@ export class SimpleCalculatorService implements CalculatorService {
 
 ```
 
-### 2. Define Your Modules
+### 2.Define Your Modules
 In fact, you will have more modules. But we just define one module here,
 let us give it a name with `ServicesModule`. It means this module will provide different kinds of services to app to use.
 
@@ -123,7 +123,7 @@ export class ServicesModule implements ServiceContract.Module {
 
 ```
 
-### 3. Define Your Module Provider Configuration
+### 3.Define Your Module Provider Configuration
 To let app knows which modules it has, you need to create a new TypeScript file named `module.config.ts` (must be this name) under your app root path (where the `package.json` file in). It will be read automatically.
 
 ```
@@ -140,7 +140,7 @@ export default class AppModuleProvider implements ServiceContract.ModuleProvider
 
 ```
 
-### 4. Use it
+### 4.Use it
 In your app's main (or entry) script file (e.g.: `index.ios.js`):
 
 ```
