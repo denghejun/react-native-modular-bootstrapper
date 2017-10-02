@@ -22,7 +22,7 @@ First of all, please give me your star on my [github repository](https://github.
   - [3. Define Your Module Provider Configuration](#3define-your-module-provider-configuration)
   - [4. Use it](#4use-it)
 - [Extra](#extra)
-- [BSD 3-Clause License](#BSD-3-Clause-License)
+- [BSD 3-Clause License](#bsd-3-clause-license)
 
 ## What is Modular Programing
 
