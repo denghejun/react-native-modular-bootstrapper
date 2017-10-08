@@ -8,7 +8,7 @@
 
 One useful modular development framework depends on Ioc, Expo and TypeScript for react native.
 
-## You Will Get From This Documentation
+## What Will You Get from This Documentation
 
 - [What is Modular Programing](#what-is-modular-programing)
 - [What is High Cohesion and Low Coupling](#what-is-high-cohesion-and-low-coupling)
