@@ -8,8 +8,6 @@
 
 One useful modular development framework depends on Ioc, Expo and TypeScript for react native.
 
-Please feel free to give me your star on my [react-native-modular-bootstrapper repository](https://github.com/denghejun/react-native-modular-bootstrapper) if you like it and want to let more people know. I will continue working on this package to make it better as well. Thanks!
-
 ## You Will Get From This Documentation
 
 - [What is Modular Programing](#what-is-modular-programing)
