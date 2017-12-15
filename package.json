@@ -1,6 +1,6 @@
 {
   "name": "react-native-modular-bootstrapper",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "One useful modular development framework depends on Ioc and Expo for react native.",
   "author": "colorfulwindmill",
   "license": "BSD-3-Clause",
@@ -31,20 +31,25 @@
     "reflect-metadata": "^0.1.10",
     "expo": "^23.0.0",
     "react": "16.0.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-23.0.0.tar.gz"
+    "react-native": "https://github.com/expo/react-native/archive/sdk-23.0.0.tar.gz",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2"
   },
   "peerDependencies": {
     "react": "*",
     "react-native": "*",
     "expo": "*",
     "inversify": "*",
-    "reflect-metadata": "*"
+    "reflect-metadata": "*",
+    "react-redux": "*",
+    "redux": "*"
   },
   "devDependencies": {
     "@types/jest": "^20.0.8",
     "@types/react": "^16.0.5",
     "@types/react-native": "^0.48.0",
     "@types/react-test-renderer": "^15.5.4",
+    "@types/react-redux": "^5.0.14",
     "jest-expo-ts": "^21.0.0",
     "react-native-typescript-transformer": "^1.1.3",
     "typescript": "^2.5.2"
