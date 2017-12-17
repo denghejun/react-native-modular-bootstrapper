@@ -48,10 +48,14 @@ export abstract class Bootstrapper<T extends ServiceContract.ModuleProvider> {
     container.bind<ServiceContract.Bootstrapper<T>>(ServiceLocator.LOCATOR_BOOTSTRAPPER.BOOTSTRAPPER).toConstantValue(this);
   }
 
-  public start(mainViewType: new () => React.Component): Container {
+  protected registerRootComponent(mainViewType: new (p, s) => React.Component) {
+    Expo.registerRootComponent(mainViewType);
+  }
+
+  public start(mainViewType: new (p, s) => React.Component): Container {
     this.initModules();
     this.registerOthers(this.container);
-    Expo.registerRootComponent(mainViewType);
+    this.registerRootComponent(mainViewType);
     return this.container;
   }
 }

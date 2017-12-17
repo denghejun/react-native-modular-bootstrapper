@@ -1,1 +1,1 @@
-export const PAYLOAD_CREATOR_DEFAULT = [payload => payload, (payload, meta) => meta];
+export const PAYLOAD_CREATOR_DEFAULT: [(...args: any[]) => any, (...args: any[]) => any] = [payload => payload, (payload, meta) => meta];
