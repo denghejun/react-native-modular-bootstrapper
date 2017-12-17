@@ -12,6 +12,6 @@ export abstract class ReduxViewContainer<TView extends React.Component> {
   protected abstract MapStateToProps(initialState: any, ownProps: any): any;
   protected abstract MapDispatchToProps(dispatch: Dispatch<any>, ownProps: any): any;
   public create() {
-    return connect(this.MapStateToProps, this.MapDispatchToProps)(this.View);
+    return connect(this.MapStateToProps.bind(this), this.MapDispatchToProps.bind(this))(this.View);
   }
 }
