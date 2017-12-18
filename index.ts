@@ -1,2 +1,3 @@
 export * from './src/interfaces'
-export { AppBootstrapper, Container } from './src/modules/services'
+export * from 'inversify'
+export { AppBootstrapper, AppBootstrapperContainer } from './src/modules/services'
