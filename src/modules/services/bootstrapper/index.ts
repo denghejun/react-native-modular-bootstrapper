@@ -1,3 +1,3 @@
 import { AppBootstrapper } from './app-bootstrapper'
-const Container = AppBootstrapper.Instance.container;
-export { AppBootstrapper, Container }
+const AppBootstrapperContainer = AppBootstrapper.Instance.container;
+export { AppBootstrapper, AppBootstrapperContainer }

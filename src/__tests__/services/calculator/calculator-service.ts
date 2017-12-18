@@ -1,4 +1,4 @@
-import { AppBootstrapper, Container, ServiceLocator, ServiceContract } from '../../../../index'
+import { AppBootstrapper, AppBootstrapperContainer, ServiceLocator, ServiceContract } from '../../../../index'
 
 beforeAll(() => {
   AppBootstrapper.startup(null);
@@ -9,7 +9,7 @@ it('[calculator-service : 01] should get right result.', async () => {
   const a = 100, b = 200;
 
   // when
-  const service = Container.get<ServiceContract.CalculatorService>(ServiceLocator.LOCATOR_CALCULATOR.CALCULATOR);
+  const service = AppBootstrapperContainer.get<ServiceContract.CalculatorService>(ServiceLocator.LOCATOR_CALCULATOR.CALCULATOR);
   const result = service.add(a, b);
 
   // then

@@ -1,4 +1,3 @@
-import "reflect-metadata"
 import { Container, inject, injectable } from 'inversify'
 import { ServiceLocator, ServiceContract } from '../../index'
 import * as React from 'react'
@@ -52,7 +51,7 @@ export abstract class Bootstrapper<T extends ServiceContract.ModuleProvider> {
     Expo.registerRootComponent(mainViewType);
   }
 
-  public start(mainViewType: new (p, s) => React.Component): Container {
+  public start(mainViewType?: new (p, s) => React.Component): Container {
     this.initModules();
     this.registerOthers(this.container);
     this.registerRootComponent(mainViewType);
