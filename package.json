@@ -1,6 +1,6 @@
 {
   "name": "react-native-modular-bootstrapper",
-  "version": "3.2.8",
+  "version": "3.2.9",
   "description": "One useful modular development framework depends on Ioc and Expo for react native.",
   "author": "colorfulwindmill",
   "license": "BSD-3-Clause",
@@ -30,7 +30,7 @@
     "inversify": "^4.3.0",
     "reflect-metadata": "^0.1.10",
     "expo": "^23.0.0",
-    "react": "16.0.0",
+    "react": "^16.0.0",
     "react-native": "0.50.3",
     "react-redux": "^5.0.6",
     "redux": "^3.7.2"
