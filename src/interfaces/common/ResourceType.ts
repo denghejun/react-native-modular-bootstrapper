@@ -1,4 +1,5 @@
 export const ResourceType = {
   AppRoot: Symbol('AppRoot'),
-  AppStore: Symbol('AppStore')
+  AppStore: Symbol('AppStore'),
+  AppReducer: Symbol('AppReducer')
 }
