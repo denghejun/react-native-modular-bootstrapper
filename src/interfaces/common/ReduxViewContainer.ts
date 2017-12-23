@@ -4,15 +4,13 @@ import { injectable, Container } from 'inversify'
 
 @injectable()
 export abstract class ReduxViewContainer<TView extends React.Component> {
-  protected readonly View: (new (p, c) => TView);
-  constructor(view: (new (p, c) => TView)) {
-    this.View = view;
+  constructor(protected view: (new (p, c) => TView)) {
   }
 
   protected abstract MapStateToProps(initialState: any, ownProps: any): any;
   protected abstract MapDispatchToProps(dispatch: Dispatch<any>, ownProps: any): any;
   public create() {
-    return connect(this.MapStateToProps.bind(this), this.MapDispatchToProps.bind(this))(this.View);
+    return connect(this.MapStateToProps.bind(this), this.MapDispatchToProps.bind(this))(this.view);
   }
 
   private static registerReduxContainerConnected(container: Container,
