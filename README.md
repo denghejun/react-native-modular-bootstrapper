@@ -1,3 +1,9 @@
+<font color='red'>
+Recently I had completed some changes about these component to make it more easy to use and provide more advance features.
+
+I am planning to update the README file these days.
+</font>
+
 # [React Native Modular Bootstrapper](https://github.com/denghejun/react-native-modular-bootstrapper.git) &middot;[![npm version](https://badge.fury.io/js/react-native-modular-bootstrapper.svg)](https://badge.fury.io/js/react-native-modular-bootstrapper) &middot;<small>ColorfulWindmill</small>
 
 [![NPM](https://nodei.co/npm-dl/react-native-modular-bootstrapper.png?months=9&height=3)](https://nodei.co/npm/react-native-modular-bootstrapper/)
