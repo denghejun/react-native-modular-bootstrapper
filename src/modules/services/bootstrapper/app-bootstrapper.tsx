@@ -3,6 +3,7 @@ import * as React from 'react'
 import { Container, injectable } from 'inversify'
 import { Provider } from 'react-redux'
 import { ResourceType } from '../../../interfaces'
+import { Font } from 'expo';
 
 @injectable()
 export class AppBootstrapper extends ServiceContract.Bootstrapper<ServiceContract.ModuleProvider> {
@@ -25,6 +26,9 @@ export class AppBootstrapper extends ServiceContract.Bootstrapper<ServiceContrac
 export class VirtualApp extends React.Component {
   private appContainer;
   private store;
+  state = {
+    isLoadingComplete: false,
+  };
 
   constructor(props) {
     super(props);
@@ -32,11 +36,18 @@ export class VirtualApp extends React.Component {
     this.store = AppBootstrapper.Instance.container.get<any>(ResourceType.AppStore);
   }
 
+  async componentDidMount() {
+    await Font.loadAsync({
+      'Arial': require('../../../assets/fonts/Arial.ttf'),
+    });
+
+    this.setState({ isLoadingComplete: true });
+  }
+
   render() {
-    return (
+    return !this.state.isLoadingComplete ? null : (
       <Provider store={this.store}>
         <this.appContainer />
-      </Provider>
-    );
+      </Provider>)
   }
 }
