@@ -14,24 +14,22 @@ export abstract class ReduxViewContainer<TView extends React.Component> {
   }
 
   private static registerReduxContainerConnected(container: Container,
-    originalReduxContainerConnectedType: symbol,
+    reduxViewContainer: new (...args: any[]) => ReduxViewContainer<any>,
     registerReduxContainerConnectedType: symbol): void {
     container.bind(registerReduxContainerConnectedType).toDynamicValue(context => {
-      return context.container.get<ReduxViewContainer<any>>(originalReduxContainerConnectedType).create();
+      return context.container.getNamed<ReduxViewContainer<any>>(reduxViewContainer.name + '_', reduxViewContainer.name).create();
     });
   }
 
   private static registerOriginalReduxContainer(container: Container,
-    originalReduxContainerConnectedType: symbol,
     reduxViewContainer: new (...args: any[]) => ReduxViewContainer<any>): void {
-    container.bind<ReduxViewContainer<any>>(originalReduxContainerConnectedType).to(reduxViewContainer);
+    container.bind<ReduxViewContainer<any>>(reduxViewContainer.name + '_').to(reduxViewContainer).whenTargetNamed(reduxViewContainer.name);
   }
 
   public static registerReduxViewContainer(container: Container,
     reduxViewContainer: new (...args: any[]) => ReduxViewContainer<any>,
-    originalReduxContainerConnectedType: symbol,
     registerReduxContainerConnectedType: symbol): void {
-    this.registerOriginalReduxContainer(container, originalReduxContainerConnectedType, reduxViewContainer);
-    this.registerReduxContainerConnected(container, originalReduxContainerConnectedType, registerReduxContainerConnectedType);
+    this.registerOriginalReduxContainer(container, reduxViewContainer);
+    this.registerReduxContainerConnected(container, reduxViewContainer, registerReduxContainerConnectedType);
   }
 }
