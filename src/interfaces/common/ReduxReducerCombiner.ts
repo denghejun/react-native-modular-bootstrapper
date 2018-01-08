@@ -5,15 +5,16 @@ import { ReduxReducer } from './ReduxReducer'
 @injectable()
 export abstract class ReduxReducerCombiner {
   constructor(protected readonly action) { }
-  protected abstract ProvideReducers(): { [propName: string]: (new (...args) => ReduxReducer) | (new (...args) => ReduxReducerCombiner) };
+  protected abstract ProvideReducers(): { [propName: string]: (new (...args) => ReduxReducer) | (new (...args) => ReduxReducerCombiner) | ReduxReducerCombiner };
   public Combine(): any {
     const combinedReducers = {};
     const reducers = this.ProvideReducers();
     for (let key in reducers) {
-      if (reducers[key]['Combine']) {
+      if (reducers[key] instanceof ReduxReducerCombiner) {
         combinedReducers[key] = reducers[key]['Combine']();
       } else {
-        let instance = new reducers[key](this.action);
+        const instanceType: any = reducers[key];
+        let instance = new instanceType(this.action);
         if (instance['create']) {
           combinedReducers[key] = instance['create']();
         } else {
