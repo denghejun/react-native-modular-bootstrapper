@@ -2,6 +2,10 @@ import * as React from 'react'
 import { connect, InferableComponentEnhancer, Dispatch, DispatchProp, Component } from 'react-redux'
 import { injectable, Container } from 'inversify'
 
+export interface ReduxViewContainerProvider {
+  [propName: string]: new (...args: any[]) => ReduxViewContainer<any>;
+}
+
 @injectable()
 export abstract class ReduxViewContainer<TView extends React.Component> {
   constructor(protected view: (new (p, c) => TView)) {
@@ -21,6 +25,19 @@ export abstract class ReduxViewContainer<TView extends React.Component> {
     });
   }
 
+  private static registerReduxContainersConnected(container: Container,
+    reduxViewContainerProvider: ReduxViewContainerProvider,
+    registerReduxContainerConnectedType: symbol): void {
+    container.bind(registerReduxContainerConnectedType).toDynamicValue(context => {
+      const combinedConnectedContainer = {};
+      for (let key in reduxViewContainerProvider) {
+        combinedConnectedContainer[key] = context.container.getNamed<ReduxViewContainer<any>>(reduxViewContainerProvider[key].name + '_', reduxViewContainerProvider[key].name).create();
+      }
+
+      return combinedConnectedContainer;
+    });
+  }
+
   private static registerOriginalReduxContainer(container: Container,
     reduxViewContainer: new (...args: any[]) => ReduxViewContainer<any>): void {
     container.bind<ReduxViewContainer<any>>(reduxViewContainer.name + '_').to(reduxViewContainer).whenTargetNamed(reduxViewContainer.name);
@@ -31,5 +48,15 @@ export abstract class ReduxViewContainer<TView extends React.Component> {
     registerReduxContainerConnectedType: symbol): void {
     this.registerOriginalReduxContainer(container, reduxViewContainer);
     this.registerReduxContainerConnected(container, reduxViewContainer, registerReduxContainerConnectedType);
+  }
+
+  public static registerReduxViewContainers(container: Container,
+    reduxViewContainerProvider: ReduxViewContainerProvider,
+    registerReduxContainerConnectedType: symbol): void {
+    for (let key in reduxViewContainerProvider) {
+      this.registerOriginalReduxContainer(container, reduxViewContainerProvider[key]);
+    }
+
+    this.registerReduxContainersConnected(container, reduxViewContainerProvider, registerReduxContainerConnectedType);
   }
 }
