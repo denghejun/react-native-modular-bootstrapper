@@ -7,8 +7,8 @@ import { handleActions } from 'redux-actions'
 export abstract class ReduxReducer {
   constructor(protected action: any) { }
   protected abstract ProvideInitState(): any;
-  protected abstract ProvideActionHandler(): any;
+  protected abstract ProvideActionHandler(action): any;
   public create(): any {
-    return handleActions(this.ProvideActionHandler(), this.ProvideInitState());
+    return handleActions(this.ProvideActionHandler(this.action), this.ProvideInitState());
   }
 }
