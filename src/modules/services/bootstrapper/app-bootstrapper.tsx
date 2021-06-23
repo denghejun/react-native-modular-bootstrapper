@@ -3,7 +3,7 @@ import * as React from 'react'
 import { Container, injectable } from 'inversify'
 import { Provider } from 'react-redux'
 import { ResourceType } from '../../../interfaces'
-import { Font } from 'expo';
+import * as Font from 'expo-font';
 
 @injectable()
 export class AppBootstrapper extends ServiceContract.Bootstrapper<ServiceContract.ModuleProvider> {

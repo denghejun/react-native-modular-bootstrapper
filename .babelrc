@@ -7,9 +7,11 @@
       "plugins": [
         "transform-react-jsx-source"
       ]
-    },
-    "plugins": [
+    }
+  },
+  "plugins": [
+    [
       "babel-plugin-root-import"
     ]
-  }
+  ]
 }
