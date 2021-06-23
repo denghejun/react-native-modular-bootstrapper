@@ -1,4 +1,4 @@
-import { injectable, inject } from 'inversify'
+import { injectable, inject } from "inversify"
 import { ResourceType } from './ResourceType'
 import { Middleware, Store, createStore, applyMiddleware } from 'redux'
 
